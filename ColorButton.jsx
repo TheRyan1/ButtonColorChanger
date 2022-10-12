@@ -1,9 +1,13 @@
 import React from "react";
 // Set the initial prop to an empty array to avoid any errors if no props passed to the component
 // Hard coded some colors for testing when no props are passed
-function ColorChanger({ colorArray = ["red", "green", "blue", "yellow"] }) {
+function ColorChanger({
+  colorArray = ["red", "green", "blue", "yellow"]
+}: {
+  colorArray: string[];
+}) {
   // Track the index of the array
-  const [counter, setCounter] = React.useState(0);
+  const [counter, setCounter] = React.useState<number>(0);
   // Handle the color change
   const handleColorChange = () => {
     // If we're at the end of the array, set the count back to 0
